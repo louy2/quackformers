@@ -46,6 +46,23 @@ impl Config {
         }
     }
 
+    pub fn v2_base_zh() -> Self {
+        Self {
+            vocab_size: 61056,
+            hidden_size: 768,
+            num_hidden_layers: 12,
+            num_attention_heads: 12,
+            intermediate_size: 3072,
+            hidden_act: candle_nn::Activation::Gelu,
+            max_position_embeddings: 8192,
+            type_vocab_size: 2,
+            initializer_range: 0.02,
+            layer_norm_eps: 1e-12,
+            pad_token_id: 0,
+            position_embedding_type: PositionEmbeddingType::Alibi,
+        }
+    }
+
     // If we want a different config, not sure if we're gonna use this
     #[allow(clippy::too_many_arguments, dead_code)]
     pub fn new(

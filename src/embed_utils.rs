@@ -52,7 +52,7 @@ impl ModelType {
     fn get_jina_model(&self, vb: VarBuilder) -> Result<JinaModel, EmbeddingError> {
         match &self {
             Self::Jina(_) => {
-                let config = JinaConfig::v2_base();
+                let config = JinaConfig::v2_base_zh();
                 Ok(JinaModel::load(vb, &config)?)
             }
             _ => Err(EmbeddingError::ModelTypeError(
