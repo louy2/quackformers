@@ -45,7 +45,7 @@ impl ModelType {
     fn get_model_id(&self) -> String {
         match &self {
             Self::Bert(_) => "sentence-transformers/all-MiniLM-L6-v2".to_string(),
-            Self::Jina(_) => "jinaai/jina-embeddings-v2-base-en".to_string(),
+            Self::Jina(_) => "jinaai/jina-embeddings-v2-base-zh".to_string(),
         }
     }
 
